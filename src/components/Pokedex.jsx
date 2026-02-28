@@ -1,32 +1,9 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useContext, useEffect } from "react";
 import Card from "./Card";
+import { usePokedex } from "../contexts/PokedexContext";
 
 export default function Pokedex() {
-  const [pagination, setPagination] = useState({
-    next: null,
-    prev: null,
-  });
-
-  const [pokedex, setPokedex] = useState([]);
-  const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
-
-  function fetchPokemon(url = baseUrl) {
-    axios.get(url).then((response) => {
-      setPagination({
-        next: response.data.next,
-        prev: response.data.previous,
-      });
-      setPokedex(response.data.results);
-    });
-  }
-
-  const goNext = () => {
-    pagination.next && fetchPokemon(pagination.next);
-  };
-  const goPrev = () => {
-    pagination.prev && fetchPokemon(pagination.prev);
-  };
+  const { fetchPokemon, goPrev, goNext, pokedex, pagination } = usePokedex();
 
   useEffect(
     fetchPokemon,
