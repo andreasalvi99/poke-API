@@ -17,26 +17,19 @@ export default function Pokedex() {
   }, []);
 
   return (
-    <>
-      <Header />
-      <section>
-        <div className="container p-5">
-          <div className="row row-cols-4 g-3">
-            {pokedex.map((pokemon) => {
-              return (
-                <div key={pokemon.name} className="col">
-                  <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                      <h2>{pokemon.name}</h2>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+    <div className="row row-cols-4 g-3">
+      {pokedex.map((pokemon) => {
+        return (
+          <div key={pokemon.name} className="col">
+            <div className="card">
+              <img src="..." className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h2>{pokemon.name}</h2>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </>
+        );
+      })}
+    </div>
   );
 }
