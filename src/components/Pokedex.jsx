@@ -7,7 +7,6 @@ export default function Pokedex() {
 
   function fetchPokemon() {
     axios.get("https://pokeapi.co/api/v2/pokemon/").then((response) => {
-      console.log(response.data.results);
       setPokedex(response.data.results);
     });
   }
@@ -19,7 +18,9 @@ export default function Pokedex() {
   return (
     <div className="row row-cols-4 g-3">
       {pokedex.map((pokemon) => {
-        return <Card name={pokemon.name} key={pokemon.name} />;
+        return (
+          <Card name={pokemon.name} key={pokemon.name} url={pokemon.url} />
+        );
       })}
     </div>
   );

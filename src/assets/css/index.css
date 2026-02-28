@@ -5,9 +5,10 @@
 }
 
 section {
-  height: calc(100vh - 66px);
+  min-height: calc(100vh - 66px);
   background-image: url(backgound.png);
   position: relative;
+  background-attachment: fixed;
 }
 
 section::before {
