@@ -1,7 +1,10 @@
+import Header from "./components/Header";
+
 export default function App() {
   return (
     <>
-      <div className="container">CIaoo</div>
+      <Header />
+      <section></section>
     </>
   );
 }

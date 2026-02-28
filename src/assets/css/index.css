@@ -1,0 +1,10 @@
+.navbar-logo {
+  height: 50px;
+  width: 150px;
+  margin-right: 20px;
+}
+
+section {
+  height: calc(100vh - 66px);
+  background-image: url(backgound.png);
+}
