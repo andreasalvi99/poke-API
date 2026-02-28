@@ -1,4 +1,6 @@
-export default function Headr() {
+import { NavLink } from "react-router-dom";
+
+export default function Header() {
   return (
     <nav
       className="navbar navbar-expand-lg"
@@ -23,12 +25,15 @@ export default function Headr() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav gap-4">
-            <a className="nav-link active" aria-current="page" href="#">
+            <NavLink to={"/"} className="text-decoration-none text-light">
               Home
-            </a>
-            <a className="nav-link" href="#">
+            </NavLink>
+            <NavLink
+              to={"/pokedex"}
+              className="text-decoration-none text-light"
+            >
               Pokedex
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

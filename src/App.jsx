@@ -1,12 +1,14 @@
-import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./HomePage";
+import Pokedex from "./components/Pokedex";
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <section>
-        <div className="layover"></div>
-      </section>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index Component={HomePage} />
+        <Route path="/pokedex" Component={Pokedex} />
+      </Routes>
+    </BrowserRouter>
   );
 }
