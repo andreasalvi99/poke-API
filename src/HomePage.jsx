@@ -5,7 +5,7 @@ export default function HomePage() {
     <>
       <Header />
       <section>
-        <div className="layover"></div>
+        <div className="container p-5"></div>
       </section>
     </>
   );

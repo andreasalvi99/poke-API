@@ -20,15 +20,20 @@ export default function Pokedex() {
     <>
       <Header />
       <section>
-        <div className="layover">
-          <div className="card" style={{ width: "18rem" }}>
-            <img src="..." className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-            </div>
+        <div className="container p-5">
+          <div className="row row-cols-4 g-3">
+            {pokedex.map((pokemon) => {
+              return (
+                <div key={pokemon.name} className="col">
+                  <div className="card">
+                    <img src="..." className="card-img-top" alt="..." />
+                    <div className="card-body">
+                      <h2>{pokemon.name}</h2>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

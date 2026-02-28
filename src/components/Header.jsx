@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <nav
-      className="navbar navbar-expand-lg"
+      className="navbar navbar-expand-lg position-sticki top 0"
       style={{ backgroundColor: "#6cbef9" }}
     >
       <div className="container-fluid">

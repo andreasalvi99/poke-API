@@ -7,12 +7,15 @@
 section {
   height: calc(100vh - 66px);
   background-image: url(backgound.png);
+  position: relative;
 }
 
-.layover {
-  height: 100%;
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  opacity: 0.3;
-  position: fixed;
-  background-color: white;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
