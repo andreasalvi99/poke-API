@@ -14,7 +14,6 @@ function PokedexProvider({ children }) {
   });
 
   //^ Funzione per la fetch dell'API
-
   const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
   function fetchPokemon(url = baseUrl) {
