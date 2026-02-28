@@ -6,7 +6,7 @@ export default function DefaultLayout() {
     <>
       <Header />
       <section>
-        <div className="container p-5">
+        <div className="container p-5 text-center">
           <Outlet />
         </div>
       </section>

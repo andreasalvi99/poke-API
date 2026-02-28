@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Card({ name, url }) {
-  const [pokemonDetails, setPokemonDetails] = useState();
+  const [pokemonDetails, setPokemonDetails] = useState(undefined);
 
   function fetchPokemonDetails() {
     axios.get(url).then((response) => {
@@ -22,10 +22,14 @@ export default function Card({ name, url }) {
 
   return (
     <div className="col">
-      <div className="card">
-        <img src={pokemonDetails.img} className="card-img-top" alt="..." />
+      <div className="card h-100 p-3">
+        {pokemonDetails && (
+          <>
+            <img src={pokemonDetails.img} className="card-img-top" alt="..." />
+          </>
+        )}
         <div className="card-body">
-          <h2>{name}</h2>
+          <h3>{name}</h3>
         </div>
       </div>
     </div>
