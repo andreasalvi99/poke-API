@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Header from "./Header";
 import axios from "axios";
+import Card from "./Card";
 
 export default function Pokedex() {
   const [pokedex, setPokedex] = useState([]);
@@ -19,16 +19,7 @@ export default function Pokedex() {
   return (
     <div className="row row-cols-4 g-3">
       {pokedex.map((pokemon) => {
-        return (
-          <div key={pokemon.name} className="col">
-            <div className="card">
-              <img src="..." className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h2>{pokemon.name}</h2>
-              </div>
-            </div>
-          </div>
-        );
+        return <Card name={pokemon.name} key={pokemon.name} />;
       })}
     </div>
   );
