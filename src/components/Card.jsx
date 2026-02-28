@@ -6,13 +6,9 @@ export default function Card({ name, url }) {
 
   function fetchPokemonDetails() {
     axios.get(url).then((response) => {
-      console.log(response.data);
       const img = response.data.sprites.front_default;
-      console.log(img);
-
       const type = response.data.types[0].type.name;
       setPokemonDetails({ img, type });
-      console.log(pokemonDetails);
     });
   }
 
@@ -22,7 +18,7 @@ export default function Card({ name, url }) {
 
   return (
     <div className="col">
-      <div className="card h-100 p-3">
+      <div className="card h-100 p-3 text-bg-secondary">
         {pokemonDetails && (
           <>
             <img src={pokemonDetails.img} className="card-img-top" alt="..." />
