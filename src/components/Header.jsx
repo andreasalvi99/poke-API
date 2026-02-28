@@ -25,13 +25,10 @@ export default function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav gap-4">
-            <NavLink to={"/"} className="text-decoration-none text-light">
+            <NavLink to={"/"} className="nav-link text-light">
               Home
             </NavLink>
-            <NavLink
-              to={"/pokedex"}
-              className="text-decoration-none text-light"
-            >
+            <NavLink to={"/pokedex"} className="nav-link text-light">
               Pokedex
             </NavLink>
           </div>
