@@ -27,13 +27,7 @@ export default function Headr() {
               Home
             </a>
             <a className="nav-link" href="#">
-              Features
-            </a>
-            <a className="nav-link" href="#">
-              Pricing
-            </a>
-            <a className="nav-link disabled" aria-disabled="true">
-              Disabled
+              Pokedex
             </a>
           </div>
         </div>

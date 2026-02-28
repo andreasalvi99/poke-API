@@ -8,3 +8,11 @@ section {
   height: calc(100vh - 66px);
   background-image: url(backgound.png);
 }
+
+.layover {
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  position: fixed;
+  background-color: white;
+}

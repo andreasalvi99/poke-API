@@ -4,7 +4,9 @@ export default function App() {
   return (
     <>
       <Header />
-      <section></section>
+      <section>
+        <div className="layover"></div>
+      </section>
     </>
   );
 }
